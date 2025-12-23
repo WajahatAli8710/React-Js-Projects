@@ -81,6 +81,106 @@ body {
 .main .nav .right h2 i {
   color: #232c3c;
 }
+.main .heroSection {
+  width: 100%;
+  padding-top: 2rem;
+  background-color: red;
+  background-image: url(../assets/heroImage.avif);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.main .heroSection .top {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.main .heroSection .top h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+.main .heroSection .top p {
+  font-size: 1.4rem;
+  text-transform: lowercase;
+  font-weight: 300;
+}
+.main .heroSection .top .btn {
+  font-size: 1.1rem;
+  font-weight: 200;
+  padding: 0.4rem 0.7rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: #0d1a2d;
+  border: none;
+  border-radius: 1.5rem;
+  white-space: nowrap;
+  display: inline;
+}
+.main .heroSection .bottom {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main .heroSection .bottom .trainers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .heroSection .bottom .trainers p {
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  font-weight: 200;
+}
+.main .heroSection .bottom .trainers .trainersPic {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.3490196078);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.main .heroSection .bottom .trainers .trainersPic img {
+  width: 2.5rem;
+  height: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 50%;
+}
+.main .heroSection .bottom .trainers .trainersPic .overlay {
+  margin-left: -10px;
+}
+.main .heroSection .bottom .reference {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .heroSection .bottom .reference .refRtn {
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 1.5rem;
+  white-space: nowrap;
+}
 
 @media (min-width: 900px) {
   .main .nav .menu {
