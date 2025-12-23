@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+  position: relative;
+}
+.main .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.main .nav h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #232c3c;
+}
+.main .nav .menu {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+.main .nav .menu p {
+  color: #0d1a2d;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 0.4rem 1rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  white-space: nowrap;
+  transition: all ease 0.5s;
+}
+.main .nav .menu p:hover {
+  border-color: #0d1a2d;
+}
+.main .nav .right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.main .nav .right .cta {
+  font-size: 1.1rem;
+  font-weight: 200;
+  padding: 0.4rem 0.7rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: #0d1a2d;
+  border: none;
+  border-radius: 1.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.main .nav .right .cta i {
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+.main .nav .right h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.main .nav .right h2 i {
+  color: #232c3c;
+}
+
+@media (min-width: 900px) {
+  .main .nav .menu {
+    display: flex;
+  }
+  .main .nav .right h2 {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
