@@ -99,6 +99,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  border-radius: 1rem;
 }
 .main .heroSection .top {
   text-align: center;
@@ -110,7 +111,7 @@ body {
   align-items: center;
 }
 .main .heroSection .top h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   line-height: 2.6rem;
   font-weight: 500;
@@ -288,6 +289,8 @@ body {
   background-position: center;
 }
 .main .TrainerDetails .showCards .card2 .btn {
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.5rem;
   font-weight: 300;
   padding: 0.6rem 0.7rem;
@@ -317,7 +320,7 @@ body {
   gap: 0.7rem;
 }
 .main .TrainerDetails .showCards .card3 .top h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   line-height: 2.6rem;
   font-weight: 500;
@@ -368,7 +371,6 @@ body {
   font-weight: 500;
   color: #0d1a2d;
   font-weight: 400;
-  white-space: nowrap;
 }
 .main .Rating {
   display: flex;
@@ -390,7 +392,7 @@ body {
   align-items: center;
 }
 .main .Rating .top .rate h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   line-height: 2.6rem;
   font-weight: 500;
@@ -414,7 +416,7 @@ body {
   align-items: center;
 }
 .main .Rating .bottom .rate h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   line-height: 2.6rem;
   font-weight: 500;
@@ -598,13 +600,13 @@ body {
 .main .Services .showCards .card3 .bottom .more i {
   font-weight: 200;
   font-size: 1.5rem;
-  border: 1px solid #F6F8FC;
+  border: 1px solid #f6f8fc;
   padding: 0.7rem;
   border-radius: 2rem;
   color: #0d1a2d;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .main .TrainerDetails .showCards {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;

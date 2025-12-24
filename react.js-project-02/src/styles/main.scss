@@ -27,7 +27,7 @@ body {
 }
 
 @mixin textLarge() {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   line-height: 2.6rem;
   font-weight: 500;
@@ -128,7 +128,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-
+    border-radius: 1rem;
     .top {
       text-align: center;
       width: 100%;
@@ -235,19 +235,18 @@ body {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+
     .showCards {
       width: 100%;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       gap: 2rem;
-
       .card {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        // gap: 1.5rem;
         padding: 1.5rem;
         aspect-ratio: 1/1;
         border-radius: 2rem;
@@ -290,7 +289,9 @@ body {
         background-position: center;
 
         .btn {
+          width: fit-content;
           @include btnStyle(
+            
             1.5rem,
             #ffffff5a,
             0.6rem 0.7rem,
@@ -361,7 +362,6 @@ body {
     h1 {
       @include textMedium();
       font-weight: 400;
-      white-space: nowrap;
     }
   }
 
@@ -500,7 +500,6 @@ body {
           }
         }
       }
-
       .card3 {
         justify-content: space-between;
         padding: 0rem;
@@ -538,32 +537,31 @@ body {
           }
         }
 
-        .bottom{
+        .bottom {
           height: 50%;
-          padding:1rem 1.5rem;
+          padding: 1rem 1.5rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          p{
-             @include textSmall();
+          p {
+            @include textSmall();
             font-weight: 400;
             text-transform: capitalize;
             color: #0d1a2d;
           }
-          .more{
+          .more {
             display: flex;
             align-items: center;
             gap: 2rem;
 
-            
-          i {
-            font-weight: 200;
-            font-size: 1.5rem;
-            border: 1px solid #F6F8FC;
-            padding: 0.7rem;
-            border-radius: 2rem;
-            color: #0d1a2d;
-          }
+            i {
+              font-weight: 200;
+              font-size: 1.5rem;
+              border: 1px solid #f6f8fc;
+              padding: 0.7rem;
+              border-radius: 2rem;
+              color: #0d1a2d;
+            }
           }
         }
       }
@@ -571,7 +569,7 @@ body {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .main {
     .TrainerDetails {
       .showCards {
