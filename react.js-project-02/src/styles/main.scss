@@ -12,17 +12,18 @@ body {
   width: 100%;
 }
 
-@mixin btnStyle($textSize, $bg, $padding, $border, $gap) {
+@mixin btnStyle($textSize, $bg, $padding, $border, $gap, $color) {
   font-size: $textSize; //1.2rem
-  font-weight: 200;
+  font-weight: 300;
   padding: $padding;
   display: flex;
   gap: $gap;
   align-items: center;
   background-color: $bg;
   border: $border;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   white-space: nowrap;
+  color: $color; // #0d1a2d;
 }
 
 @mixin textLarge() {
@@ -31,7 +32,13 @@ body {
   line-height: 2.6rem;
   font-weight: 500;
 }
-// @mixin textMedium()
+@mixin textMedium() {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  // line-height: 2.6rem;
+  font-weight: 500;
+  color: #0d1a2d;
+}
 @mixin textSmall() {
   font-size: 1.4rem;
   text-transform: lowercase;
@@ -43,11 +50,17 @@ body {
   text-transform: lowercase;
   font-weight: 200;
 }
+.page-wrapper {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
 .main {
   height: fit-content;
-  width: 100vw;
+  width: 100%;
   position: relative;
-
+  align-items: center;
   .nav {
     display: flex;
     align-items: center;
@@ -66,13 +79,13 @@ body {
       align-items: center;
       gap: 1rem;
       p {
-        color: #0d1a2d;
         @include btnStyle(
           1.2rem,
           null,
           0.4rem 1rem,
           1px solid transparent,
-          5px
+          5px,
+          #0d1a2d
         );
         transition: all ease 0.5s;
       }
@@ -86,7 +99,7 @@ body {
       align-items: center;
       gap: 1.5rem;
       .cta {
-        @include btnStyle(1.1rem, #0d1a2d, 0.4rem 0.7rem, none, 5px);
+        @include btnStyle(1.1rem, #0d1a2d, 0.4rem 0.7rem, none, 5px, #fff);
         cursor: pointer;
         i {
           font-weight: 200;
@@ -109,7 +122,6 @@ body {
   .heroSection {
     width: 100%;
     padding-top: 2rem;
-    background-color: red;
     background-image: url(../assets/heroImage.avif);
     background-size: cover;
     background-position: center;
@@ -132,8 +144,14 @@ body {
         @include textSmall();
       }
       .btn {
-        @include btnStyle(1.1rem, #0d1a2d, 0.4rem 0.7rem, none, 5px);
+        @include btnStyle(1.1rem, #0d1a2d, 0.4rem 0.7rem, none, 5px, #fff);
         display: inline;
+        cursor: pointer;
+        i {
+          font-weight: 200;
+
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -143,9 +161,8 @@ body {
       padding: 1rem;
 
       flex-direction: column;
-    gap: 1rem;
+      gap: 1rem;
       .trainers {
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -174,25 +191,398 @@ body {
             margin-left: -10px;
           }
         }
-
-       
       }
 
-       .reference{
+      .reference {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .refRtn {
+          @include btnStyle(1.2rem, transparent, none, none, 5px, #fff);
+        }
+      }
+    }
+  }
+
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .btn {
+      width: fit-content;
+      @include btnStyle(
+        1.2rem,
+        transparent,
+        0.4rem 1rem,
+        1px solid transparent,
+        5px,
+        #0d1a2d
+      );
+      transition: all ease 0.5s;
+    }
+
+    .btn:hover {
+      border-color: #0d1a2d;
+    }
+    .content {
+      @include textMedium();
+    }
+  }
+
+  .TrainerDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    .showCards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 2rem;
+
+      .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // gap: 1.5rem;
+        padding: 1.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 2rem;
+      }
+      .card1 {
+        background-color: #0d1a2d;
+
+        i {
+          font-size: 2.5rem;
+        }
+
+        p {
+          @include textMedium();
+          color: #fff;
+          font-weight: 400;
+          span {
+            color: #404e61;
+          }
+        }
+
+        .btn {
+          padding: 0.5rem 0.5rem;
+          padding-left: 2.5rem;
+          background-color: #2eb3ff;
+          width: fit-content;
+          border-radius: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .innerBtn {
+            padding: 0.7rem;
+            border-radius: 1.5rem;
+            background-color: #fff;
+          }
+        }
+      }
+      .card2 {
+        background-image: url(/src/assets/aboutMen.avif);
+        background-size: cover;
+        background-position: center;
+
+        .btn {
+          @include btnStyle(
+            1.5rem,
+            #ffffff5a,
+            0.6rem 0.7rem,
+            1px solid #fff,
+            0px,
+            #fff
+          );
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(5px);
+        }
+      }
+
+      .card3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #f6f8fc;
+        .top {
+          display: flex;
+          flex-direction: column;
+          gap: 0.7rem;
+          h1 {
+            @include textLarge();
+            font-size: 3.5rem;
+            color: #0d1a2d;
+          }
+          h4 {
+            @include textMedium();
+          }
+          p {
+            @include textMini();
+            color: #0d1a2d;
+          }
+        }
+
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          .line {
             display: flex;
             align-items: center;
             justify-content: space-between;
-          .refRtn{
-            @include btnStyle(1.2rem, transparent , none , none , 5px )
 
+            h5 {
+              @include textMedium();
+            }
+
+            .dote {
+              display: flex;
+
+              align-items: center;
+              gap: 0.4rem;
+
+              .circule {
+                padding: 0.5rem;
+                background-color: #2eb3ff;
+                border-radius: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    h1 {
+      @include textMedium();
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+
+  .Rating {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 2.5rem 0rem;
+    border-bottom: 2px solid #f6f8fc;
+    .top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .rate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          @include textLarge();
+          color: #0d1a2d;
+        }
+        p {
+          @include textMini();
+          color: #0d1a2d;
+        }
+      }
+    }
+    .bottom {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .rate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          @include textLarge();
+          color: #0d1a2d;
+        }
+        p {
+          @include textMini();
+          color: #0d1a2d;
+        }
+      }
+    }
+  }
+
+  .Services {
+    .showCards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 2rem;
+      .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 2rem;
+      }
+      .card1 {
+        .btn1 {
+          width: fit-content;
+          @include btnStyle(
+            1.2rem,
+            transparent,
+            0.4rem 1rem,
+            1px solid transparent,
+            5px,
+            #0d1a2d
+          );
+          transition: all ease 0.5s;
+        }
+        .btn1:hover {
+          border-color: #0d1a2d;
+        }
+
+        p {
+          @include textMedium();
+          color: #0d1a2d;
+        }
+        .btn2 {
+          @include btnStyle(1.1rem, #0d1a2d, 0.4rem 0.7rem, none, 5px, #fff);
+          cursor: pointer;
+          width: fit-content;
+          i {
+            font-weight: 200;
+            font-size: 1.3rem;
+          }
+        }
+      }
+      .card2 {
+        background-image: url(/src/assets/femaleTennisPlayer.avif);
+        background-size: cover;
+        background-position: center;
+        justify-content: space-between;
+        .btn {
+          @include btnStyle(
+            1.5rem,
+            #ffffff5a,
+            0.6rem 1rem,
+            1px solid #fff,
+            0px,
+            #fff
+          );
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(5px);
+        }
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            @include textSmall();
+            font-weight: 500;
+            text-transform: capitalize;
           }
 
+          i {
+            font-weight: 200;
+            font-size: 1.5rem;
+            background-color: #010101;
+            padding: 0.7rem;
+            border-radius: 2rem;
+          }
         }
+      }
+
+      .card3 {
+        justify-content: space-between;
+        padding: 0rem;
+        .top {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background-image: url(/src/assets/tennisBall.png);
+          background-size: cover;
+          background-position: center;
+          height: 50%;
+          border-radius: 2rem;
+          padding: 1.5rem;
+
+          .btn {
+            @include btnStyle(
+              1.5rem,
+              #ffffff5a,
+              0.6rem 1rem,
+              1px solid #fff,
+              0px,
+              #fff
+            );
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+          }
+
+          p {
+            @include textSmall();
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+        }
+
+        .bottom{
+          height: 50%;
+          padding:1rem 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          p{
+             @include textSmall();
+            font-weight: 400;
+            text-transform: capitalize;
+            color: #0d1a2d;
+          }
+          .more{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            
+          i {
+            font-weight: 200;
+            font-size: 1.5rem;
+            border: 1px solid #F6F8FC;
+            padding: 0.7rem;
+            border-radius: 2rem;
+            color: #0d1a2d;
+          }
+          }
+        }
+      }
     }
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
+  .main {
+    .TrainerDetails {
+      .showCards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
   .main {
     .nav {
       .menu {
@@ -203,6 +593,13 @@ body {
         h2 {
           display: none;
         }
+      }
+    }
+
+    .TrainerDetails {
+      .showCards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
       }
     }
   }
