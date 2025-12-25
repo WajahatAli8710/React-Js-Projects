@@ -1,3 +1,7 @@
+import img1 from "../assets/menTrainer1.avif";
+import img2 from "../assets/menTrainer2.avif";
+import img3 from "../assets/femaleTrainer.avif";
+
 const HeroSection = () => {
   return (
     <div className="heroSection">
@@ -22,17 +26,9 @@ const HeroSection = () => {
             Get the real results.
           </p>
           <div className="trainersPic">
-            <img src="/assets/menTrainer1.avif" alt="" />
-            <img
-              className="overlay"
-              src="/assets/femailTrainer.avif"
-              alt=""
-            />
-            <img
-              className="overlay"
-              src="/assets/menTrainer2.avif"
-              alt=""
-            />
+            <img src={img1} alt="" />
+            <img className="overlay" src={img2} alt="" />
+            <img className="overlay" src={img3} alt="" />
           </div>
         </div>
         <div className="reference">
