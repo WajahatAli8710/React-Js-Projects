@@ -22,15 +22,15 @@ const HeroSection = () => {
             Get the real results.
           </p>
           <div className="trainersPic">
-            <img src="../src/assets/menTrainer1.avif" alt="" />
+            <img src="/assets/menTrainer1.avif" alt="" />
             <img
               className="overlay"
-              src="../src/assets/femailTrainer.avif"
+              src="/assets/femailTrainer.avif"
               alt=""
             />
             <img
               className="overlay"
-              src="../src/assets/menTrainer2.avif"
+              src="/assets/menTrainer2.avif"
               alt=""
             />
           </div>
