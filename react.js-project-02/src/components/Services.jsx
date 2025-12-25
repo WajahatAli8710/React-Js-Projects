@@ -13,7 +13,6 @@ const Services = () => {
             <i className="ri-arrow-right-up-long-line"></i>
           </button>
         </div>
-
         <div className="card card2">
           <button className="btn">Training Programs</button>
           <div className="bottom">
@@ -26,7 +25,6 @@ const Services = () => {
             </h4>
           </div>
         </div>
-
         <div className="card card3">
           <div className="top">
             <button className="btn">Training Programs</button>

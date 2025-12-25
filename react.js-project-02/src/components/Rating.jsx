@@ -12,7 +12,6 @@ const Rating = () => {
           <p>Player Retention Rate</p>
         </div>
       </div>
-
       <div className="bottom">
         <div className="rate">
           <h1>1,200+</h1>
