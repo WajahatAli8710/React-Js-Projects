@@ -5,7 +5,7 @@ const TrainerDetails = () => {
         <div className="card card1">
           <i className="ri-dashboard-fill"></i>
           <p>
-            Professional hard courts{" "}
+            Professional hard courts
             <span>
               with tournament-grade lighting & climate control - play in
             </span>
