@@ -1,6 +1,6 @@
 import img1 from "../assets/menTrainer1.avif";
-import img2 from "../assets/menTrainer2.avif";
-import img3 from "../assets/femaleTrainer.avif";
+import img3 from "../assets/menTrainer2.avif";
+import img2 from "../assets/femaleTrainer.avif";
 
 const HeroSection = () => {
   return (
