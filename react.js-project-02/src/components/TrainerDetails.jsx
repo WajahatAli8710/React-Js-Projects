@@ -24,7 +24,7 @@ const TrainerDetails = () => {
             <h1>100+</h1>
             <h4>Pro Coaches</h4>
             <p>
-              Certified professionals ready to boost your <br /> game from first
+              Certified professionals ready to boost your  game from first
               serve to tournament level.
             </p>
           </div>
@@ -32,9 +32,6 @@ const TrainerDetails = () => {
             <div className="line">
               <h5>Beginner</h5>
               <div className="dote">
-                <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
                 <div className="circule"></div>
                 <div className="circule"></div>
                 <div className="circule"></div>
@@ -50,21 +47,12 @@ const TrainerDetails = () => {
                 <div className="circule"></div>
                 <div className="circule"></div>
                 <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
               </div>
               <h5>40</h5>
             </div>
             <div className="line">
               <h5>Advanced</h5>
               <div className="dote">
-                <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
-                <div className="circule"></div>
                 <div className="circule"></div>
                 <div className="circule"></div>
                 <div className="circule"></div>
