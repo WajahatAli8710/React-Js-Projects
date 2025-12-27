@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="flex gap-4">
       <div
-        className="w-[50%] aspect-[16/10] bg-[#181818]  rounded-xl flex flex-col justify-between p-10"
+        className="w-[50%] aspect-[16/10] bg-[#181818]  rounded-xl flex flex-col justify-between p-10 gap-16"
       >
         <p className="text-[#CECECE] text-lg">ABOUT</p>
         <div className=" flex flex-col gap-4">
