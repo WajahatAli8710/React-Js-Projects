@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root .app {
+  height: 100vh;
+  width: 100%;
+  background-color: #171125;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 50px 1fr 0.625fr;
+  grid-template-areas: "side search search search search" "side hero hero hero hero" "side videos videos videos videos";
+  padding: 1rem;
+  grid-gap: 1rem;
+}
+#root .app .sideBar {
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  grid-area: side;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 1rem;
+}
+#root .app .sideBar .top {
+  display: flex;
+  flex-direction: column;
+}
+#root .app .sideBar .top .innerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .app .sideBar .top .innerTop .left {
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+#root .app .sideBar .top .innerTop .left h2 {
+  font-size: 1.6rem;
+}
+#root .app .sideBar .top .innerTop i {
+  font-size: 1.2rem;
+  color: #8f8f8f;
+}
+#root .app .sideBar .top .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid gray;
+  padding: 1rem 0rem;
+}
+#root .app .sideBar .top .menu p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #8f8f8f;
+  display: flex;
+  gap: 1rem;
+}
+#root .app .sideBar .top .menu p i {
+  font-size: 1.2rem;
+  color: #8f8f8f;
+}
+#root .app .sideBar .top .opection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid gray;
+  padding: 1rem 0rem;
+}
+#root .app .sideBar .top .opection p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #8f8f8f;
+  display: flex;
+  gap: 1rem;
+}
+#root .app .sideBar .top .opection p i {
+  font-size: 1.2rem;
+  color: #8f8f8f;
+}
+#root .app .sideBar .top .setting {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0rem;
+}
+#root .app .sideBar .top .setting p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+}
+#root .app .sideBar .top .setting p i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+#root .app .sideBar .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0rem;
+}
+#root .app .sideBar .bottom p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+}
+#root .app .sideBar .bottom p i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+#root .app .searchBar {
+  grid-area: search;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#root .app .searchBar .input {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#root .app .searchBar .input input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+}
+#root .app .searchBar .input i {
+  font-size: 1.2rem;
+  color: #8f8f8f;
+}
+#root .app .searchBar .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#root .app .searchBar .info i {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+#root .app .searchBar .info img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#root .app .heroSection {
+  grid-area: hero;
+  background-image: url(./assets/heroImage.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: flex-start;
+  border: 1px solid gray;
+  border-radius: 1rem;
+}
+#root .app .heroSection button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  border-radius: 20rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+}
+#root .app .heroSection div {
+  width: 100%;
+}
+#root .app .heroSection div .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+#root .app .heroSection div .bottom .top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#root .app .heroSection div .bottom .top button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  border-radius: 20rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #fff;
+}
+#root .app .heroSection div .bottom h1 {
+  font-size: 2.2rem;
+}
+#root .app .heroSection div .bottom p {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: rgb(212, 211, 211);
+  display: flex;
+  gap: 1rem;
+}
+#root .app .heroSection div .bottom .innerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .app .heroSection div .bottom .innerBottom .left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#root .app .heroSection div .bottom .innerBottom .left button {
+  font-size: 1rem;
+  padding: 0 1rem 0 0;
+  color: #000;
+  background-color: #b99be7;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#root .app .heroSection div .bottom .innerBottom .left button i {
+  font-size: 1.3rem;
+  color: #000;
+}
+#root .app .heroSection div .bottom .innerBottom .left i {
+  font-size: 1rem;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#root .app .heroSection div .bottom .innerBottom .left .icon-2 {
+  transform: rotate(90deg);
+}
+#root .app .heroSection div .bottom .innerBottom .btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  border-radius: 20rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #fff;
+}
+#root .app .showVideos {
+  background-color: rgb(27, 24, 24);
+  grid-area: videos;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+#root .app .showVideos .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .app .showVideos .top h2 {
+  font-size: 1.5rem;
+}
+#root .app .showVideos .top .btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+}
+#root .app .showVideos .cards {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+#root .app .showVideos .cards .card {
+  flex: 0 0 auto;
+  width: 30%;
+  background-color: #ccc;
+  aspect-ratio: 3/1.5;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+#root .app .showVideos .cards .card .des {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: rgb(240, 240, 240);
+  display: flex;
+  gap: 1rem;
+}
+#root .app .showVideos .cards .card .duration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .app .showVideos .cards .card .duration .Series {
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  border-radius: 20rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #fff;
+}
+#root .app .showVideos .cards .card .duration .time {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: rgb(240, 240, 240);
+  display: flex;
+  gap: 1rem;
+}
+#root .app .showVideos .cards .card .progressBar {
+  width: 100%;
+  background-color: rgb(71, 71, 71);
+  overflow: hidden;
+  border-radius: 10px;
+}
+#root .app .showVideos .cards .card .progressBar .completeBar {
+  padding: 2px;
+  background-color: #702f8a;
+}/*# sourceMappingURL=main.css.map */

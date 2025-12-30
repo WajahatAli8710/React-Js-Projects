@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin textStyle($size, $weight, $color, $gap) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  display: flex;
+  gap: $gap;
+}
+
+@mixin iconStyle(
+  $size,
+  $color,
+  $padding: null,
+  $borderRadius: null,
+  $bgColor: null
+) {
+  font-size: $size;
+  color: $color;
+  padding: $padding;
+  border-radius: $borderRadius;
+  background-color: $bgColor;
+}
+
+@mixin btnStyle($size, $color, $padding, $bgColor, $borderRadius, $gap: null) {
+  font-size: $size;
+  padding: $padding;
+  color: $color;
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+  gap: $gap;
+}
+
+#root {
+  .app {
+    height: 100vh;
+    width: 100%;
+    background-color: #171125;
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px 1fr calc(1fr / 1.6);
+    grid-template-areas:
+      "side search search search search"
+      "side hero hero hero hero"
+      "side videos videos videos videos";
+    padding: 1rem;
+    grid-gap: 1rem;
+    .sideBar {
+      background-color: #ffffff15;
+      backdrop-filter: blur(20px);
+      grid-area: side;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid gray;
+      border-radius: 1rem;
+      .top {
+        display: flex;
+
+        flex-direction: column;
+
+        .innerTop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .left {
+            display: flex;
+            align-items: center;
+            display: flex;
+            gap: 0.5rem;
+            h2 {
+              font-size: 1.6rem;
+            }
+          }
+          i {
+            @include iconStyle(1.2rem, #8f8f8f);
+          }
+        }
+
+        .menu {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          border-bottom: 1px solid gray;
+          padding: 1rem 0rem;
+          p {
+            @include textStyle(1.2rem, 200, #8f8f8f, 1rem);
+            i {
+              @include iconStyle(1.2rem, #8f8f8f);
+            }
+          }
+        }
+
+        .opection {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          border-bottom: 1px solid gray;
+          padding: 1rem 0rem;
+          p {
+            @include textStyle(1.2rem, 200, #8f8f8f, 1rem);
+            i {
+              @include iconStyle(1.2rem, #8f8f8f);
+            }
+          }
+        }
+        .setting {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem 0rem;
+          p {
+            @include textStyle(1.2rem, 200, #fff, 1rem);
+            i {
+              @include iconStyle(1.2rem, #fff);
+            }
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0rem;
+        p {
+          @include textStyle(1.2rem, 200, #fff, 1rem);
+          i {
+            @include iconStyle(1.2rem, #fff);
+          }
+        }
+      }
+    }
+    .searchBar {
+      grid-area: search;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .input {
+        height: 100%;
+        width: 35%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #ffffff15;
+        backdrop-filter: blur(20px);
+        border: 1px solid gray;
+        border-radius: 1rem;
+        padding: 1rem;
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          font-size: 1.1rem;
+        }
+        i {
+          @include iconStyle(1.2rem, #8f8f8f);
+        }
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        i {
+          @include iconStyle(1rem, #fff, 0.5rem, 50%);
+          background-color: #ffffff15;
+          backdrop-filter: blur(20px);
+        }
+        img {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    .heroSection {
+      grid-area: hero;
+      background-image: url(./assets/heroImage.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: flex-start;
+      border: 1px solid gray;
+      border-radius: 1rem;
+      button {
+        @include btnStyle(1.2rem, #fff, 0.5rem 1rem, #ffffff15, 20rem);
+        backdrop-filter: blur(5px);
+        border: none;
+      }
+
+      div {
+        width: 100%;
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          .top {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            button {
+              @include btnStyle(1.2rem, #fff, 0.5rem 1rem, #ffffff15, 20rem);
+              backdrop-filter: blur(5px);
+              border: 1px solid #fff;
+            }
+          }
+          h1 {
+            font-size: 2.2rem;
+          }
+          p {
+            @include textStyle(1.1rem, 200, rgb(212, 211, 211), 1rem);
+          }
+          .innerBottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              button {
+                @include btnStyle(1rem, #000, 0 1rem 0 0, #b99be7, 10px);
+                backdrop-filter: blur(5px);
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                  @include iconStyle(1.3rem, #000);
+                }
+              }
+              i {
+                @include iconStyle(1rem, #fff, 1rem, 5px);
+                background-color: #ffffff15;
+                backdrop-filter: blur(5px);
+              }
+              .icon-2 {
+                transform: rotate(90deg);
+              }
+            }
+            .btn {
+              @include btnStyle(1.2rem, #fff, 0.5rem 1rem, #ffffff15, 20rem);
+              backdrop-filter: blur(5px);
+              border: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+    .showVideos {
+      background-color: rgb(27, 24, 24);
+      grid-area: videos;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow: hidden;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+          font-size: 1.5rem;
+        }
+        .btn {
+          @include btnStyle(1rem, #fff, 0.5rem 1rem, #ffffff15, 5px);
+          backdrop-filter: blur(5px);
+          border: none;
+        }
+      }
+      .cards {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+
+        .card {
+          flex: 0 0 auto;
+          width: 30%;
+          background-color: #ccc;
+          aspect-ratio: 3/1.5;
+          border-radius: 1rem;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+          justify-content: flex-end;
+          padding: 1rem;
+          .des {
+            @include textStyle(1.1rem, 200, rgb(240, 240, 240), 1rem);
+          }
+
+          .duration {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .Series {
+              @include btnStyle(0.8rem, #fff, 0.3rem 1rem, #ffffff15, 20rem);
+              backdrop-filter: blur(5px);
+              border: 1px solid #fff;
+            }
+            .time {
+              @include textStyle(1.1rem, 200, rgb(240, 240, 240), 1rem);
+            }
+          }
+
+          .progressBar {
+            width: 100%;
+            background-color: rgb(71, 71, 71);
+            overflow: hidden;
+            border-radius: 10px;
+
+            .completeBar {
+              padding: 2px;
+              background-color: #702f8a;
+            }
+          }
+        }
+      }
+    }
+  }
+}
