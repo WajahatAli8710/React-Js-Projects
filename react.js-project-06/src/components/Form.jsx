@@ -1,10 +1,16 @@
+import { useState } from "react";
+
 const Form = ({ addContact }) => {
+  const [name, setName] = useState("");
+  const [tageline, setTageline] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
   const submitHandler = (e) => {
     e.preventDefault();
     let contactData = {
-      name: e.target.name.value,
-      tageline: e.target.tageline.value,
-      imageUrl: e.target.image.value,
+      name: name,
+      tageline: tageline,
+      imageUrl: imageUrl,
     };
     addContact(contactData);
     e.target.reset();
@@ -17,9 +23,30 @@ const Form = ({ addContact }) => {
           submitHandler(e);
         }}
       >
-        <input type="text" placeholder="enter name" name="name" />
-        <input type="text" placeholder="enter tagline" name="tageline" />
-        <input type="text" placeholder="enter image url" name="image" />
+        <input
+          type="text"
+          placeholder="enter name"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="enter tagline"
+          name="tageline"
+          onChange={(e) => {
+            setTageline(e.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="enter image url"
+          name="imageUrl"
+          onChange={(e) => {
+            setImageUrl(e.target.value);
+          }}
+        />
         <button>Submit</button>
       </form>
     </div>
