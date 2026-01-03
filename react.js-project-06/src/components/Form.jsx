@@ -13,7 +13,9 @@ const Form = ({ addContact }) => {
       imageUrl: imageUrl,
     };
     addContact(contactData);
-    e.target.reset();
+    setName("")
+    setImageUrl("")
+    setTageline("")
   };
 
   return (
