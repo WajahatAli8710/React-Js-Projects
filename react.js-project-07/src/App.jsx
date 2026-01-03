@@ -37,6 +37,7 @@ const App = () => {
         >
           <div className="inputs">
             <input
+              required
               type="text"
               placeholder="enter image url"
               value={imageUrl}
@@ -45,6 +46,7 @@ const App = () => {
               }}
             />
             <input
+              required
               type="text"
               placeholder="enter name"
               value={name}
@@ -53,6 +55,7 @@ const App = () => {
               }}
             />
             <input
+              required
               type="text"
               placeholder="enter role"
               value={role}
@@ -61,6 +64,7 @@ const App = () => {
               }}
             />
             <input
+              required
               type="text"
               placeholder="enter description"
               value={des}
