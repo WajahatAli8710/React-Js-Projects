@@ -13,9 +13,9 @@ const Form = ({ addContact }) => {
       imageUrl: imageUrl,
     };
     addContact(contactData);
-    setName("")
-    setImageUrl("")
-    setTageline("")
+    setName("");
+    setImageUrl("");
+    setTageline("");
   };
 
   return (
