@@ -7,13 +7,19 @@ const App = () => {
   const [role, setRole] = useState("");
   const [des, setDes] = useState("");
 
-  const [allData, setAllData] = useState([]);
+  let usersData = JSON.parse(localStorage.getItem("allData")) || [];
+
+  const [allData, setAllData] = useState(usersData);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setAllData([...allData, { imageUrl, name, role, des }]);
+    const newData = [...allData];
+    newData.push({ imageUrl, name, role, des });
 
+    setAllData(newData);
+
+    localStorage.setItem("allData", JSON.stringify(newData));
     setImageUrl("");
     setName("");
     setRole("");
@@ -26,6 +32,7 @@ const App = () => {
     oldData.splice(idx, 1);
 
     setAllData(oldData);
+    localStorage.setItem("allData", JSON.stringify(oldData));
   };
   return (
     <div className="app">

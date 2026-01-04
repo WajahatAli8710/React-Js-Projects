@@ -7,7 +7,7 @@ const Card = (props) => {
       <p className="role">{elem.role}</p>
       <p>{elem.des}</p>
       <button
-      className="deleteBtn"
+        className="deleteBtn"
         onClick={() => {
           deleteHandler(idx);
         }}
