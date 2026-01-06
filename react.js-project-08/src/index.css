@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+#root .app {
+  width: 100%;
+  min-height: 100%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  background-color: #eeeeee;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#root .app button {
+  background-color: #5c6f2b;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #eeeeee;
+  cursor: pointer;
+}
+#root .app .cardContainers {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#root .app .cardContainers .card {
+  background-color: #d8c9a7;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 3px solid #de802b;
+}
+#root .app .cardContainers .card img {
+  width: 11rem;
+}
+#root .app .cardContainers .card h2 {
+  color: #de802b;
+  font-size: 1.7rem;
+}/*# sourceMappingURL=index.css.map */
